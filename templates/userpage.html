@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "bm.css" %}">
+    <script src="{% static "bm.js" %}"></script>
+    <style>
+        .p1{
+            width: 100vw;height: 100vh;
+            background-image: url('/static/css/images/');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="p1">
+        <div class="container bg-info">
+            <nav class="navbar navbar-collapse navbar-dark mt-3 ">
+                <div class="logo p-2">
+                    <a href="#" class="navbar-brand text-dark fw-bolder">Welcome {{usr.name}}</a>
+                </div>
+                <div id="menu" class="col float-end ">
+                    <a href="/logout" class="h5 float-end m-2 text-dark fw-bold text-decoration-none">Logout</a>
+                    <a href="" class="h5 float-end m-2 text-dark fw-bold text-decoration-none">Profile</a>
+                    <a href="" class="h5 float-end m-2 text-dark fw-bold text-decoration-none">Notofications</a>
+                </div>
+            </nav>
+        </div>
+       <div class="box">
+    
+       </div>
+    </div>
+</body>
+</html>
