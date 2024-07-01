@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from app4.models import student
+from app4.models import *
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
@@ -83,21 +83,26 @@ def doregister(request):
     r.save()
     return render(request, 'login.html')
 
+
 def logincheck(request):
     username=request.GET['uname']
     password=request.GET['pwd']
     r=None
     try:
-        r=student.objects.get(username=username, password=password)
+        r = Std.objects.get(roll=username)
         request.session['roll']=r.roll
     except Exception as ex:
-        return render(request, 'login.html',{"msg":"Invalid username or password"})
+        r=student.objects.get(username=username, password=password)
+        request.session['roll']=r.roll
     return redirect('/userpage')
     # return render(request, 'home.html')
 
 def userpage(request):
     roll=request.session['roll']
-    r=student.objects.get(roll=roll)
+    try:
+        r=Std.objects.get(roll=roll)
+    except Exception as ex:
+        r=student.objects.get(roll=roll)
     return render(request,'userpage.html',{"usr":r})
 
 

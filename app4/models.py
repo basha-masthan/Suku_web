@@ -2,6 +2,15 @@ from django.db import models
 
 # Create your models here.
 
+class Std(models.Model):
+    roll = models.CharField(max_length=10,unique=True,primary_key=True)
+    dept = models.CharField(max_length=50)
+    name=models.CharField(max_length=100)
+    cgpa = models.CharField(max_length=10)
+    year = models.CharField(max_length=10)
+    email=models.EmailField(max_length=50)
+    mobile=models.IntegerField(max_length=10)
+
 class student(models.Model):
     roll = models.CharField(max_length=10,unique=True,primary_key=True)
     dept = models.CharField(max_length=50)

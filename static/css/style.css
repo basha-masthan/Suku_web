@@ -1,8 +1,12 @@
-#homeimg
-{
-    background-image: url("images/img10.jpg");
+.p1
+{   
+    width: 100vw;height: auto;
+    background-color: black;
+    /* background-image: url("images/img10.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
 }
 #text
 {
@@ -16,7 +20,7 @@ h2
 }
 #b1{
     display: flex;
-    height: 80vh;
+    /* height: 50vh; */
     width: 50vw;
     flex-direction: column;
     /* justify-content:; */

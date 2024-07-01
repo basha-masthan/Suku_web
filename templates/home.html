@@ -11,45 +11,89 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .p1{
+            width: 100vw;;
+            background-image: url('/static/css/images/img10.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .bx{
+
+        }
+    </style>
 </head>
-<body id="homeimg">
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand col-1 text-center" href="#">
-                <img src="{% static 'css\images\img8.png' %}" style="width: 2em;">
+<body>
+    <div class="p1" >
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand col-1 text-center" href="#">
+                    <img src="{% static 'css\images\img8.png' %}" style="width: 2em;">
+                </a>
+                <!-- <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div id="menu">
+                    <ul class="navbar-nav h5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registration/">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login/">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact/">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <div id="b1" class=" text-white ">
+            <a href="#">
+                <img src="{% static 'css\images\img12.png'%}" style="width: 8em;">
             </a>
-            <!-- <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <div id="menu">
-                <ul class="navbar-nav h5">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about/">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/registration/">Registration</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login/">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact/">Contact</a>
-                    </li>
-                </ul>
+            <h1 id="text" >Geethanjali</h1>
+            <h2 class="display-5">Institute of Science & Technology</h2>
+            <h1 id="text1">CSE Department</h1>
+        </div>
+        <div class="bx border m-auto opacity-50 bg-info"  style="width: 95vw;height: 75vh;">
+            <h3 class="text-center alert fw-bold">Circulars</h3>
+            <div class="row text-center">
+                <div class="col"></div>
+                <div class="col-md-6 border alert alert-info opacity-75 fw-bolder display-6">Acadamics</div>
+                <div class="col"></div>
+                <div class="col-md-4 border alert alert-dark opacity-100 text-white fw-bolder display-6" style="text-shadow: 3px 3px  rgb(0, 0, 0);">Cultural</div>
+                <div class="col"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col"></div>
+                <div class="col-md-3 border alert alert-dark opacity-100 text-white fw-bolder display-6" style="text-shadow: 3px 3px  rgb(0, 0, 0);">Sports</div>
+                <div class="col"></div>
+                <div class="col-md-7 border alert alert alert-dark opacity-100  fw-bolder display-6">Festivals</div>
+                <div class="col"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col"></div>
+                <div class="col-md-4 border alert alert-dark opacity-100 fw-bolder display-6">Industrial Visit</div>
+                <div class="col"></div>
+                <div class="col-md-2 border alert alert-dark opacity-100 text-white fw-bolder display-6" style="text-shadow: 3px 3px  rgb(0, 0, 0);">Arts</div>
+                <div class="col"></div>
+                <div class="col-3 border alert alert-dark opacity-100 text-white fw-bolder display-6" style="text-shadow: 3px 3px  rgb(0, 0, 0);">Pro. Expo</div>
+                <div class="col"></div>
+
             </div>
         </div>
-
-    </nav>
-    <div id="b1" class=" text-white ">
-        <a href="#">
-            <img src="{% static 'css\images\img12.png'%}" style="width: 8em;">
-        </a>
-        <h1 id="text" >Geethanjali</h1>
-        <h2 class="display-5">Institute of Science & Technology</h2>
-        <h1 id="text1">CSE Department</h1>
+        <div class="mt-3">
+            <span class="hiding">Basha</span>
+        </div>
     </div>
 </body>
 </html>

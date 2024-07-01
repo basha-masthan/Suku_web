@@ -9,30 +9,182 @@
     <script src="{% static "bm.js" %}"></script>
     <style>
         .p1{
-            width: 100vw;height: 100vh;
-            background-image: url('/static/css/images/');
+            width: 100vw;height: auto;
+            margin-top: -2%;
+            background-image: url('/static/css/images/mbbg1.jpg');
             background-size: cover;
+            background-attachment: fixed;
             background-position: center;
         }
+        .nn{
+            background: transparent;
+            margin-top: 2%;
+        }
+        #menu a{
+            float: inline-end;
+            font-size: 18.5px;
+            text-decoration: none;
+            padding: 0px 10px ;
+            font-weight: bold;
+        }
+        .box{
+            height: 80vh;width: 90vw;margin: auto;
+            opacity: 0.8;
+            display: flex;
+            background-color: rgb(47, 38, 38);
+        }
+        .box .img{
+            height: 100%;width: 32.5;
+            display: flex;
+            justify-content: center;align-content: center;
+        }
+        .box .txt{
+            width: 67.5%;
+            margin-top: 4%;
+        }
+        .bp21{
+            margin:2% auto;
+            width: 95vw;height: auto;
+        }
+        .dropdown {
+  position: relative; /* Make the dropdown menu positioned relative to the button */
+  display: inline-block; /* Allow the button to stay inline with other elements */
+}
+
+.dropbtn {
+  background-color: #3498db; /* Adjust background color as desired */
+  color: white;
+  padding: 16px; /* Adjust padding to fit content */
+  font-size: 16px; /* Adjust font size */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Indicate clickable behavior */
+}
+
+.dropdown-content {
+  display: none; /* Hide the dropdown menu initially */
+  align-items: center;justify-content: center;
+  position: absolute; /* Position the menu absolutely relative to the button */
+  background-color: #f1f1f1; /* Background color for the menu */
+  min-width: 160px; /* Minimum width for the menu */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a light shadow */
+  z-index: 1; /* Ensure the menu appears above other elements */
+}
+
+.dropdown-content a {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  color: black; /* Text color for menu items */
+  padding: 12px 16px; /* Adjust padding for menu items */
+  text-decoration: none; /* Remove underlines */
+  display: block; /* Display each item as a block */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown menu on hover */
+}
+
     </style>
 </head>
 <body>
     <div class="p1">
-        <div class="container bg-info">
-            <nav class="navbar navbar-collapse navbar-dark mt-3 ">
-                <div class="logo p-2">
-                    <a href="#" class="navbar-brand text-dark fw-bolder">Welcome {{usr.name}}</a>
+        <div class="nn container sticky-md-top">
+            <nav class="navbar alert navbar-collapse bg-info opacity-75 ">
+                <div class="logo">
+                    <a href="#" class="navbar-brand nav-link fw-bolder">Welcome {{usr.name}}</a>
                 </div>
                 <div id="menu" class="col float-end ">
-                    <a href="/logout" class="h5 float-end m-2 text-dark fw-bold text-decoration-none">Logout</a>
-                    <a href="" class="h5 float-end m-2 text-dark fw-bold text-decoration-none">Profile</a>
-                    <a href="" class="h5 float-end m-2 text-dark fw-bold text-decoration-none">Notofications</a>
+                    <a href="/logout" class="" >Logout</a>
+                    <div class="dropdown float-end">
+                        <a href="" class="">Profile</a>
+                        <div class="dropdown-content mt-4 text-center">
+                          <a href="#">Edit Profile</a>
+                          <a href="#">Active Tickets</a>
+                          <a href="#">Help Desk</a>
+                          <a href="#">Resource</a>
+                        </div>
+                      </div>
+                      
+                    <a href="" class="nav-link">Notofications</a>
                 </div>
             </nav>
         </div>
-       <div class="box">
-    
+       <div class="box border">
+            <div class="img">
+                <img src="/static/css/images/img7.webp" class="img-fluid " alt="" srcset="" width="100%">
+            </div>
+            <div class="txt text-white">
+                <div class="row">
+                    <div class="col-lg"></div>
+                    <div class="col-lg-2">
+                        <h4>Roll :</h4>
+                        <h4>Name :</h4> 
+                        <h4>Dept..of : </h4>
+                        <h4>Year :</h4>
+                        <h4>CGPA :</h4>
+                    </div>
+                    <div class="col-lg-5"> 
+                        <h4>{{usr.roll}}</h4>
+                        <h4>{{usr.name}}</h4> 
+                        <h4>{{usr.dept}} </h4>
+                        <h4>{{usr.year}} </h4>
+                        <h4>{{usr.cgpa}}</h4>
+                    </div>
+                    <div class="col-lg"></div>
+                </div><br>
+                <div class="skills">
+                    <h3 class="text-center text-decoration-underline w-50">Skills</h3>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg"></div>
+                    <div class="col-lg-2">
+                        <h4>Semister 1:</h4>
+                        <h4>Semister 2:</h4> 
+                        <h4>Semister 3:</h4>
+                        <h4>Semister 4:</h4>
+                        <h4>Semister 5:</h4>
+                    </div>
+                    <div class="col-lg-5"> 
+                        <h4>C & DATA STRACTURES</h4>
+                        <h4>PYTHON & DBMS</h4> 
+                        <h4>JAVA</h4>
+                        <h4>OPERATING SYSTEMS</h4>
+                        <h4>HTML/CSS & AI </h4>
+                    </div>
+                    <div class="col-lg"></div>
+                </div><br>
+                <div class="row text-center">
+                    
+                    <div class="col-lg"><div class="btn btn-info">Attendence</div></div>
+                    <div class="col-lg"><div class="btn btn-info">CGPA/SGPA</div></div>
+                    <div class="col-lg-3"><div class="btn btn-info">PAST PERFORMANCE</div></div>
+                    <div class="col-lg"><div class="btn btn-info">BIO-DATA</div></div>
+                    
+                </div>
+            </div>
+       </div>
+       <div class="p12" style="height: 100vh;">
+        <div class="bp21">
+            <div class="past">
+                <div class="log text-center display-6 text-white fw-bolder alert">PAST EVENTS</div>
+            </div>
+            <div class="row bg-light opacity-50" style="">
+                <div class="col-3 border text-center bg-info opacity-75">
+                    <img src="/static/css/images/techfest.png" alt="" srcset="" width="100%">
+                </div>
+                <div class="col-3 bg-success opacity-100">
+                    <img src="/static/css/images/farewell.jpg" alt="" srcset="" width="100%">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="p12">
+
+        </div>
        </div>
     </div>
+
 </body>
 </html>
